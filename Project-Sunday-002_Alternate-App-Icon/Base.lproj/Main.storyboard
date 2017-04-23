@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Project_Sunday_002_Alternate_App_Icon" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What's your current weather forecast?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="0gz-jn-alt">
+                                <rect key="frame" x="16" y="28" width="343" height="66.5"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sunny" translatesAutoresizingMaskIntoConstraints="NO" id="GdO-Ad-VOF">
+                                <rect key="frame" x="94" y="124.5" width="187.5" height="133"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yBl-Hv-1Bg">
+                                <rect key="frame" x="166" y="356" width="0.0" height="0.0"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="D6s-Nh-Iw0">
+                                <rect key="frame" x="16" y="287.5" width="343" height="34.5"/>
+                                <segments>
+                                    <segment title="Sunny"/>
+                                    <segment title="Cloudy"/>
+                                    <segment title="Rain"/>
+                                    <segment title="Snow"/>
+                                    <segment title="Windy"/>
+                                    <segment title="Night"/>
+                                </segments>
+                                <connections>
+                                    <action selector="weatherSegmentedControlTapped:" destination="BYZ-38-t0r" eventType="valueChanged" id="Fn8-hk-Jb9"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="D6s-Nh-Iw0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GQj-Bv-XPD"/>
+                            <constraint firstItem="GdO-Ad-VOF" firstAttribute="top" secondItem="0gz-jn-alt" secondAttribute="bottom" constant="30" id="IfT-Li-Rng"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="D6s-Nh-Iw0" secondAttribute="leading" id="N5V-QV-krz"/>
+                            <constraint firstItem="0gz-jn-alt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="V5l-Se-lzx"/>
+                            <constraint firstItem="GdO-Ad-VOF" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.5" id="VYX-fy-oMC"/>
+                            <constraint firstItem="GdO-Ad-VOF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VrN-6S-mxr"/>
+                            <constraint firstItem="D6s-Nh-Iw0" firstAttribute="top" secondItem="GdO-Ad-VOF" secondAttribute="bottom" constant="30" id="W1Y-Pd-10L"/>
+                            <constraint firstItem="0gz-jn-alt" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="ctU-tc-R6s"/>
+                            <constraint firstItem="GdO-Ad-VOF" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.2" id="d0G-AZ-26q"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="0gz-jn-alt" secondAttribute="leading" id="hgx-Ia-GPN"/>
+                            <constraint firstItem="D6s-Nh-Iw0" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.05" id="lhH-XD-jge"/>
+                            <constraint firstItem="0gz-jn-alt" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.1" id="pPW-lp-Bpp"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="D6s-Nh-Iw0" secondAttribute="trailing" id="qjv-ow-JSF"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="0gz-jn-alt" secondAttribute="trailing" id="t4d-7S-Jou"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="weatherImageView" destination="GdO-Ad-VOF" id="axY-yG-AqT"/>
+                        <outlet property="weatherSegmentedControl" destination="D6s-Nh-Iw0" id="MY9-V3-tor"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="sunny" width="60" height="60"/>
+    </resources>
+</document>
